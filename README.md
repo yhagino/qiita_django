@@ -1,18 +1,24 @@
 # qiita_django
-
-## Python Django入門 (2) Mac編
-12/22/2020
-https://qiita.com/kaki_k/items/e824cfcf089e75d43551
-
-## Python Django入門 (3)
-12/22/2020
-https://qiita.com/kaki_k/items/7b178ad39394a031b50d
-
-## Python Django入門 (4)
-12/23/2020
-https://qiita.com/kaki_k/items/6e17597804437ef170ae
-
 id
 yukihagino
 pass
 hogefuga
+
+## 環境構築
+###1. django install
+###2. start project
+django-admin startproject mybook
+###3. DB setting in setting.py
+setting db and user/pass
+## create app
+###1. start app
+python manage.py startapp [name of app]
+###2. gene models for db
+difine models of db on cms/models.py  
+activate models cms/apps.py in mybook/setting.py INSTALLED_APPS  
+python manage.py makemigrations [name of app]
+python manage.py migrate [name of app]
+
+## make schem of urls
+touch cms/urls.py  
+include urls in mybook/urls.py
