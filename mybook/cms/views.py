@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 
 from cms.models import Book
@@ -35,4 +35,7 @@ def book_edit(request, book_id=None):
 
 def book_del(request, book_id):
     """書籍の削除"""
-    return HttpResponse('書籍の削除')
+    # return HttpResponse('書籍の削除')
+    book = get_object_or_404(Book, pk=book_id)
+    book.delete()
+    return redirect('cms:book_list')
