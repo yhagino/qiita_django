@@ -1,9 +1,7 @@
 # qiita_django
-id
-yukihagino
-pass
-hogefuga
-
+id yukihagino  
+pass hogefuga  
+https://qiita.com/kaki_k/items/511611cadac1d0c69c54
 ## 環境構築
 ###1. django install
 ###2. start project
